@@ -5,13 +5,15 @@ ZSH_THEME="robbyrussell"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git
+plugins=(
+git
 emoji
 osx
+zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
-PROMPT="%F{6}%n%f@%F{2}%m%f $emoji[card_index_dividers]  %~ $emoji[high_voltage_sign]  $ "
+PROMPT="%{$fg_bold[red]%}%n%{$reset_color%} at %{$fg_bold[yellow]%}%m%{$reset_color%} in %{$fg_bold[green]%}%~%{$reset_color%} on $(git_prompt_info) $emoji[high_voltage_sign] $ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 

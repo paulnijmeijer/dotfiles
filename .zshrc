@@ -13,4 +13,4 @@ alias cd..='cd ..'
 alias diff='colordiff'
 alias mount='mount |column -t'
 alias grep='grep --color=auto'
-
+alias ll='exa -lh'
